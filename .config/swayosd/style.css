@@ -1,0 +1,30 @@
+window {
+    background: rgba(30, 30, 46, 0.95);
+    border: 2px solid #cba6f7;
+    border-radius: 0px;
+    box-shadow: none;
+}
+
+/* Pasek głośności */
+progressbar {
+    background: rgba(88, 91, 112, 0.3);
+    border-radius: 0px;
+}
+
+trough {
+    background: transparent;
+    border-radius: 0px;
+}
+
+highlight {
+    background: #cba6f7;
+    border-radius: 0px;
+}
+
+image, label {
+    color: #cdd6f4;
+}
+
+label:checked, .caps-lock {
+    color: #cba6f7;
+}

@@ -33,17 +33,15 @@
     },
 
     "hyprland/workspaces": {
-        "format": "[{name}]",
-        "on-click": "activate",
-        "on-scroll-up": "hyprctl dispatch workspace e+1",
-        "on-scroll-down": "hyprctl dispatch workspace e-1",
-        "sort-by-number": true,
-        "all-outputs": true,
-        "persistent-workspaces": {
-            "*": 5
+            "format": "[{name}]",
+            "on-click": "sh -c 'hyprctl dispatch workspace {name}'",
+            "sort-by-number": true,
+            "all-outputs": true,
+            "persistent-workspaces": {
+                "*": 5
+            },
+            "tooltip": false
         },
-        "tooltip": false
-    },
 
     "hyprland/window": {
         "format": "{}",
@@ -97,31 +95,34 @@
     },
 
     "temperature": {
-        "interval": 3,
-        "critical-threshold": 80,
-        "format": "TEMP:{temperatureC}°C",
-        "format-critical": "TEMP:{temperatureC}°C!",
-        "tooltip": true
-    },
-
+            "interval": 3,
+            "thermal-zone": 0,
+            "hwmon-path-abs": "/sys/class/hwmon",
+            "input-filename": "temp1_input",
+            "critical-threshold": 80,
+            "format": "TEMP:{temperatureC}°C",
+            "format-critical": "TEMP:{temperatureC}°C!",
+            "tooltip": true
+        },
+        
     "disk": {
         "interval": 30,
         "format": "DSK:{percentage_used}%",
         "path": "/",
         "tooltip": true,
         "tooltip-format": "Root: {used} / {total} ({percentage_used}%)",
-        "on-click": "kitty -e df -h /"
+        "on-click": "kitty --hold -e df -h /"
     },
 
     "network": {
-            "interval": 2,
-            "format-wifi": "NET:{ipaddr}",
-            "format-ethernet": "NET:{ipaddr}",
-            "format-disconnected": "NET:OFF",
-            "format-alt": "NET:↓{bandwidthDownBytes} ↑{bandwidthUpBytes}",
-            "tooltip-format": "Interfejs: {ifname}\nIP: {ipaddr}/{cidr}\n↓ Pobieranie: {bandwidthDownBytes}\n↑ Wysyłanie: {bandwidthUpBytes}",
-            "on-click-right": "kitty -e nmtui"
-        },
+        "interval": 2,
+        "format-wifi": "NET:{ipaddr}",
+        "format-ethernet": "NET:{ipaddr}",
+        "format-disconnected": "NET:OFF",
+        "format-alt": "NET:↓{bandwidthDownBytes} ↑{bandwidthUpBytes}",
+        "tooltip-format": "Interfejs: {ifname}\nIP: {ipaddr}/{cidr}\n↓ Pobieranie: {bandwidthDownBytes}\n↑ Wysyłanie: {bandwidthUpBytes}",
+        "on-click-right": "kitty -e nmtui"
+    },
 
     "pulseaudio": {
         "format": "VOL:{volume}%",
@@ -141,7 +142,10 @@
     },
 
     "tray": {
-        "icon-size": 15,
-        "spacing": 8
-    }
+            "icon-size": 15,
+            "spacing": 8,
+            "ignored-apps": [
+                "nm-applet"
+            ]
+        }
 }

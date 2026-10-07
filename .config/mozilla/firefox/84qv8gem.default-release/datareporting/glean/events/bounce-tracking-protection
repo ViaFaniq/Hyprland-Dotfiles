@@ -1,0 +1,5 @@
+{"timestamp":3631417,"category":"bounce.tracking.protection","name":"purge_action","extra":{"is_dry_run":"true","glean_timestamp":"1791303200433","site_host":"openai.com","success":"true","bounce_time":"1791292682"}}
+{"timestamp":5802139,"category":"glean","name":"restarted","extra":{"glean_timestamp":"1791305371155","glean.startup.date":"2026-10-06T18:49+02:00"},"execution_counter":1}
+{"timestamp":9401476,"category":"bounce.tracking.protection","name":"purge_action","extra":{"is_dry_run":"true","glean_timestamp":"1791308970492","site_host":"gmail.com","success":"true","bounce_time":"1791302671"},"session":{"session_id":"c1a76def-9c3e-4a62-a750-3a935fc40591","session_seq":9,"event_seq":55,"session_sample_rate":1.0,"session_start_time":"2026-10-06T18:49:32.119+02:00"},"execution_counter":1}
+{"timestamp":13908512,"category":"glean","name":"restarted","extra":{"glean.startup.date":"2026-10-06T21:04+02:00","glean_timestamp":"1791313477528"},"execution_counter":2}
+{"timestamp":36711,"category":"glean","name":"restarted","extra":{"glean.startup.date":"2026-10-07T16:15+02:00","glean_timestamp":"1791382523707"},"execution_counter":3}

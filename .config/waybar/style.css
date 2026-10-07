@@ -1,3 +1,7 @@
+/* =========================================================
+   WAYBAR CATPPUCCIN MOCHA STYLE
+   ========================================================= */
+
 * {
     font-family: "JetBrainsMono Nerd Font", "JetBrains Mono", monospace;
     font-size: 12px;
@@ -7,13 +11,14 @@
     min-height: 0;
 }
 
+/* Główny pasek */
 window#waybar {
-    background: rgba(30, 30, 46, 0.92);
-    color: #cdd6f4;
-    border-bottom: 1px solid #313244;
+    background: rgba(30, 30, 46, 0.95); /* Base #1e1e2e */
+    color: #cdd6f4;                    /* Text #cdd6f4 */
+    border-bottom: 1px solid #313244;   /* Surface0 #313244 */
 }
 
-/* Padding modułów */
+/* Marginesy i padding dla wszystkich modułów */
 #custom-prompt,
 #workspaces,
 #window,
@@ -27,46 +32,45 @@ window#waybar {
 #pulseaudio,
 #idle_inhibitor,
 #tray {
-    padding: 0 9px;
+    padding: 0 10px;
 }
 
-/* Prompt CLI */
+/* Custom Prompt CLI ($ user@hostname ~) */
 #custom-prompt {
-    color: #89b4fa;
+    color: #cba6f7; /* Zmieniono z niebieskiego na fioletowy */
     font-weight: bold;
     padding-left: 12px;
     padding-right: 12px;
 }
 
-/* Pulpity */
+/* Workspace Switcher */
 #workspaces {
     border-left: 1px solid #313244;
 }
 
 #workspaces button {
     background: transparent;
-    color: #6c7086;
-    padding: 0 4px;
+    color: #6c7086; /* Overlay0 #6c7086 */
+    padding: 0 5px;
     margin: 0;
 }
 
 #workspaces button:hover {
-    color: #cdd6f4;
-    background: #313244;
+    color: #cdd6f4; /* Text */
+    background: #313244; /* Surface0 */
 }
 
 #workspaces button.active {
-    color: #a6e3a1;
-    background: #18241b;
+    color: #a6e3a1; /* Green #a6e3a1 */
+    background: #181825; /* Mantle #181825 */
     font-weight: bold;
 }
 
 #workspaces button.urgent {
     color: #f38ba8;
-    background: #311b22;
+    background: #45475a;
 }
 
-/* Tytuł okna */
 #window {
     color: #a6adc8;
     padding-left: 12px;
@@ -76,9 +80,8 @@ window#waybar {
     padding: 0;
 }
 
-/* Zegar */
 #clock {
-    color: #89b4fa;
+    color: #cba6f7;
     font-weight: bold;
     padding-left: 14px;
     padding-right: 14px;
@@ -86,13 +89,12 @@ window#waybar {
     border-right: 1px solid #313244;
 }
 
-/* Odtwarzacz */
+
 #custom-media {
     color: #f5c2e7;
     border-left: 1px solid #313244;
 }
 
-/* Wskaźniki zasobów */
 #cpu {
     color: #f9e2af;
     border-left: 1px solid #313244;
@@ -110,7 +112,7 @@ window#waybar {
 
 #temperature.critical {
     color: #f38ba8;
-    background: #311b22;
+    background: #313244;
 }
 
 #disk {
@@ -129,7 +131,7 @@ window#waybar {
 }
 
 #pulseaudio.muted {
-    color: #6c7086;
+    color: #585b70;
 }
 
 #idle_inhibitor {
@@ -139,14 +141,14 @@ window#waybar {
 
 #idle_inhibitor.activated {
     color: #f9e2af;
+    background: #313244;
 }
 
 #tray {
     border-left: 1px solid #313244;
-    padding-right: 10px;
+    padding-right: 12px;
 }
 
-/* Efekt Hover dla modułów */
 #custom-prompt:hover,
 #custom-media:hover,
 #cpu:hover,

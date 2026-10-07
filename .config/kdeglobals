@@ -1,0 +1,17 @@
+[KDE]
+WidgetStyle=kvantum
+
+[Icons]
+Theme=Papirus-Dark
+
+[Colors:View]
+BackgroundNormal=30,30,46
+ForegroundNormal=205,214,244
+
+[Colors:Window]
+BackgroundNormal=30,30,46
+ForegroundNormal=205,214,244
+
+[General]
+ColorScheme=CatppuccinMochaBlue
+name=CatppuccinMochaBlue
