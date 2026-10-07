@@ -180,8 +180,8 @@ hl.bind(mainMod .. " + SHIFT + S", hl.dsp.exec_cmd('grim -g "$(slurp -d)" - | wl
 hl.bind("PRINT",                       hl.dsp.exec_cmd('grim ~/Pictures/Screenshot_$(date +%Y%m%d_%H%M%S).png'))
 
 -- Mouse
-hl.bind(mainMod .. " + mouse:272",  hl.dsp.window.drag(),   { mouse = true })
-hl.bind(mainMod .. " + mouse:273",  hl.dsp.window.resize(), { mouse = true })
+hl.bind(mainMod .. " + mouse_down", hl.dsp.focus({ workspace = "e-1" }))
+hl.bind(mainMod .. " + mouse_up",   hl.dsp.focus({ workspace = "e+1" }))
 
 -- Multimedia keyboard
 --hl.bind("XF86AudioRaiseVolume", hl.dsp.exec_cmd("wpctl set-volume -l 1.5 @DEFAULT_AUDIO_SINK@ 1%+"), { locked = true, repeating = true })
