@@ -20,6 +20,8 @@ These dotfiles are for my personal use and are provided as-is. Use them at your 
 - Kvantum, GTK, and Qt appearance settings
 - Kitty terminal, Fish shell, and related desktop preferences
 
+See [binds.md](binds.md) for the keyboard and mouse shortcuts.
+
 ## Installation
 
 Requirements: Arch Linux, `sudo` access, and an installed AUR helper (`paru` or `yay`). Run the installer as your regular user, not with `sudo`:
