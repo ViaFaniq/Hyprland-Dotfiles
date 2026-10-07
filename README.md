@@ -6,9 +6,9 @@ These dotfiles are for my personal use and are provided as-is. Use them at your 
 
 ## Screenshots
 
-![Desktop screenshot 1](Screenshots/ss1.png)
+![Desktop screenshot 1](Screenshots/ss2.png)
 
-![Desktop screenshot 2](Screenshots/ss2.png)
+![Desktop screenshot 2](Screenshots/ss1.png)
 
 ## Components
 
