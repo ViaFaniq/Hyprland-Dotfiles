@@ -180,8 +180,8 @@ hl.bind(mainMod .. " + SHIFT + S", hl.dsp.exec_cmd('grim -g "$(slurp -d)" - | wl
 hl.bind("PRINT",                       hl.dsp.exec_cmd('grim ~/Pictures/Screenshot_$(date +%Y%m%d_%H%M%S).png'))
 
 -- Mouse
-hl.bind(mainMod .. " + mouse_down", hl.dsp.focus({ workspace = "e-1" }))
-hl.bind(mainMod .. " + mouse_up",   hl.dsp.focus({ workspace = "e+1" }))
+hl.bind(mainMod .. " + mouse:272",  hl.dsp.window.drag(),   { mouse = true })
+hl.bind(mainMod .. " + mouse:273",  hl.dsp.window.resize(), { mouse = true })
 
 -- Multimedia keyboard
 --hl.bind("XF86AudioRaiseVolume", hl.dsp.exec_cmd("wpctl set-volume -l 1.5 @DEFAULT_AUDIO_SINK@ 1%+"), { locked = true, repeating = true })
@@ -196,6 +196,18 @@ hl.bind(mainMod .. " + XF86AudioRaiseVolume", hl.dsp.exec_cmd("swayosd-client --
 hl.bind(mainMod .. " + XF86AudioLowerVolume", hl.dsp.exec_cmd("swayosd-client --input-volume -5"), { locked = true, repeating = true })
 hl.bind(mainMod .. " + XF86AudioMute",        hl.dsp.exec_cmd("swayosd-client --input-volume mute-toggle"), { locked = true, repeating = true })
 
+-- More window / workspace controls --
+hl.bind(mainMod .. " + Tab",          hl.dsp.window.cycle_next())
+hl.bind(mainMod .. " + SHIFT + Tab", hl.dsp.window.cycle_next({ next = false }))
+hl.bind(mainMod .. " + B",           hl.dsp.window.float({ action = "toggle" }))
+hl.bind(mainMod .. " + M",           hl.dsp.window.fullscreen({ action = "toggle" }))
+hl.bind(mainMod .. " + SHIFT + M",   hl.dsp.window.fullscreen({ action = "toggle" }))
+hl.bind(mainMod .. " + bracketleft", hl.dsp.focus({ workspace = "e-1" }))
+hl.bind(mainMod .. " + bracketright",hl.dsp.focus({ workspace = "e+1" }))
+hl.bind(mainMod .. " + SHIFT + bracketleft",  hl.dsp.window.move({ workspace = "e-1" }))
+hl.bind(mainMod .. " + SHIFT + bracketright", hl.dsp.window.move({ workspace = "e+1" }))
+hl.bind(mainMod .. " + mouse_down", hl.dsp.focus({ workspace = "e+1" }))
+hl.bind(mainMod .. " + mouse_up",   hl.dsp.focus({ workspace = "e-1" }))
 
 -- Misc
 hl.bind(mainMod .. " + Escape", hl.dsp.exec_cmd("hyprlock"))

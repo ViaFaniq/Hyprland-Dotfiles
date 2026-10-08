@@ -65,8 +65,8 @@
 
 - `SUPER + Left mouse drag` — drag window
 - `SUPER + Right mouse drag` — resize window
-- `SUPER + Whell mouse down` — e-1 workspace
-- `SUPER + Whell mouse up` — e+1 workspace
+- `SUPER + Whell mouse down` — e+1 workspace
+- `SUPER + Whell mouse up` — e-1 workspace
 
 ## Media / brightness / volume
 
