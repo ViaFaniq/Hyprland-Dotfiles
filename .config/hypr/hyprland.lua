@@ -35,7 +35,7 @@ local Communicator = "org.equicord.equibop"
 hl.on("hyprland.start", function()
     hl.exec_cmd("waybar")
     --hl.exec_cmd("hyprpaper")
-    hl.exec._cmd("awww")
+    hl.exec_cmd("awww")
     hl.exec_cmd("/usr/lib/polkit-kde-authentication-agent-1 &")
     hl.exec_cmd("hypridle")
     hl.exec_cmd("dunst &")
@@ -197,6 +197,10 @@ hl.bind("XF86MonBrightnessDown",hl.dsp.exec_cmd("brightnessctl set 5%-"),       
 hl.bind(mainMod .. " + XF86AudioRaiseVolume", hl.dsp.exec_cmd("swayosd-client --input-volume +5"), { locked = true, repeating = true })
 hl.bind(mainMod .. " + XF86AudioLowerVolume", hl.dsp.exec_cmd("swayosd-client --input-volume -5"), { locked = true, repeating = true })
 hl.bind(mainMod .. " + XF86AudioMute",        hl.dsp.exec_cmd("swayosd-client --input-volume mute-toggle"), { locked = true, repeating = true })
+hl.bind("XF86AudioPlay",      hl.dsp.exec_cmd("playerctl play-pause"), { locked = true })
+hl.bind("XF86AudioPause",     hl.dsp.exec_cmd("playerctl pause"),      { locked = true })
+hl.bind("XF86AudioNext",      hl.dsp.exec_cmd("playerctl next"),       { locked = true })
+hl.bind("XF86AudioPrev",      hl.dsp.exec_cmd("playerctl previous"),   { locked = true })
 
 -- More window / workspace controls --
 hl.bind(mainMod .. " + Tab",          hl.dsp.window.cycle_next())
